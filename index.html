@@ -1,1 +1,55 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduRadio Station</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>EduRadio Station</h1>
+        <p class="safety-notice">
+            <strong>Safety Notice:</strong> This website lets you play videos from YouTube and other online sources. 
+            Please note that not all content on these platforms is safe for kids. Teachers and parents should supervise and pre-screen any material used in educational settings.
+        </p>
+    </header>
+    <main>
+        <section class="video-section">
+            <div class="video-container">
+                <h2>Primary Visuals</h2>
+                <iframe id="primaryVideo" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" 
+                    title="Primary Visuals" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <h2>Secondary Audio (Radio Announcer / Music)</h2>
+                <iframe id="secondaryVideo" width="320" height="180" src="https://www.youtube.com/embed/5qap5aO4i9A?enablejsapi=1" 
+                    title="Secondary Audio" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="controls-section">
+            <h3>Controls</h3>
+            <div class="controls">
+                <div>
+                    <label for="primaryUrl">Primary Video URL:</label>
+                    <input type="text" id="primaryUrl" placeholder="Paste YouTube URL here">
+                    <button onclick="setVideo('primary')">Load</button>
+                </div>
+                <div>
+                    <label for="secondaryUrl">Secondary Video URL:</label>
+                    <input type="text" id="secondaryUrl" placeholder="Paste YouTube URL here">
+                    <button onclick="setVideo('secondary')">Load</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; 2024 EduRadio Station | For educational use only. 
+            <span class="safety-notice">Always supervise children online.</span>
+        </p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
